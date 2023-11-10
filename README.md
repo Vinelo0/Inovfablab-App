@@ -5,4 +5,5 @@ Um aplicativo para ajudar no funcionamento do Inovfablab da Universidade Santa C
 na pasta do seu projeto >
 
 1 - npm install react-native-sqlite-storage
+
 2 - npm install redux react-redux redux-thunk redux-persist
