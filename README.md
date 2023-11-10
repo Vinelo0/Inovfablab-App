@@ -6,7 +6,7 @@ npm install react-native-sqlite-storage
 
 npm install redux react-redux redux-thunk redux-persist
 
-## Bibliotecas Restantes
+## Para Instalar o Navigate
 
 npm install @react-navigation/native
 
