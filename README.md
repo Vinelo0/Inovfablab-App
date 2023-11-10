@@ -3,9 +3,11 @@ Um aplicativo para ajudar no funcionamento do Inovfablab da Universidade Santa C
 
 ## Para instalar o SQLlite
 npm install react-native-sqlite-storage
+
 npm install redux react-redux redux-thunk redux-persist
 
 ## Bibliotecas Restantes
 
 npm install @react-navigation/native
+
 npx expo install react-native-screens react-native-safe-area-context
