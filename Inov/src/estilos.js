@@ -2,73 +2,94 @@ import React from "react";
 import { StyleSheet } from "react-native";
 
 const estilos = StyleSheet.create({
+  fundo: {
+    flexGrow: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
+    alignItems: "center",
+    opacity:1,
+    width:'100%',
+    height:'100%',
+  },
 
-    fundo:{
-        flexGrow:1,
-        resizeMode:'cover',
-        justifyContent:'center',
-        alignItems:'center',
-        position:'relative'
-    },
+  logo: {
+    width: 120,
+    height: 120,
+    resizeMode: "contain",
+  },
 
-    logo:{
-        width:120,
-        height:120,
-        resizeMode:'contain',
-    },
+  view: {
+    flexGrow: 1,
+    justifyContent: "center",
+    alignItems: "flex-start",
+    spacing: 20,
+  },
 
-    view:{
-        flexGrow:1,
-        justifyContent:'center',
-        alignItems:'flex-start',
-        spacing: 20,
-    },
+  botao1: {
+    borderRadius: 20,
+    borderColor: "#fff",
+    backgroundColor: "#2b156c",
+    width: 180,
+    height: 80,
+    justifyContent: "center",
+    alignItems: "center",
+    margin: 10,
+    borderWidth: 2,
+  },
 
-    botao1:{
-        borderRadius:25,
-        borderColor:"#fff",
-        backgroundColor:'#2b156c',
-        width:180,
-        height:80,
-        justifyContent:'center',
-        alignItems:'center',
-        margin:10,
-        borderWidth:2,
-        
-    },
+  botao2: {
+    borderRadius: 20,
+    borderColor: "#fff",
+    backgroundColor: "#dc261e",
+    width: 180,
+    height: 80,
+    justifyContent: "center",
+    alignItems: "center",
+    margin: 10,
+    borderWidth: 2,
+  },
 
-    botao2:{
-        borderRadius:25,
-        borderColor:"#fff",
-        backgroundColor:'#dc261e',
-        width:180,
-        height:80,
-        justifyContent:'center',
-        alignItems:'center',
-        margin:10,
-        borderWidth:2,
-    },
-    
-    txt:{
-        fontSize:20,
-        fontWeight: 'bold',
-        color: "#fff"
-    },
+  txt: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#fff",
+    justifyContent: "center",
+    textAlign: "center",
+  },
 
-    view2:{
-        justifyContent:'center',
-        alignItems:'center',
-        flex:1
-    },
+  view2: {
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
+  },
 
-    unisanta:{
-        width:70,
-        height:70,
-        resizeMode:'contain',
-        position:'absolute',
-        bottom:0,
-        right:0.5
-    }
-})
+  unisanta: {
+    width: 75,
+    height: 75,
+    resizeMode: "contain",
+    position: "absolute",
+    bottom: 3,
+    right: 3,
+  },
+  loginInp: {
+    width: 20,
+    height: 20,
+    backgroundColor: "#fff",
+  },
+  viewLogin: {
+    backgroundColor: "#000",
+    justifyContent: "center",
+  },
+  viewLogin2: {
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    width:250,
+    height:400,
+    textAlign:'center',
+    borderRadius:20,
+    borderWidth:1,
 
-export default estilos
+  },
+});
+
+export default estilos;
