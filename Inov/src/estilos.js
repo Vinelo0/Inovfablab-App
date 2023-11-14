@@ -7,9 +7,9 @@ const estilos = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
     alignItems: "center",
-    opacity:1,
-    width:'100%',
-    height:'100%',
+    opacity: 1,
+    width: "100%",
+    height: "100%",
   },
 
   logo: {
@@ -71,25 +71,73 @@ const estilos = StyleSheet.create({
     bottom: 3,
     right: 3,
   },
+
   loginInp: {
-    width: 20,
-    height: 20,
+    width: 150,
+    height: 40,
+    borderRadius: 15,
+    borderWidth: 2,
     backgroundColor: "#fff",
+    padding: 10,
+    color: "#000",
+    
   },
   viewLogin: {
-    backgroundColor: "#000",
-    justifyContent: "center",
-  },
-  viewLogin2: {
     backgroundColor: "#fff",
     justifyContent: "center",
-    width:250,
-    height:400,
-    textAlign:'center',
-    borderRadius:20,
-    borderWidth:1,
-
+    width: "100%",
+    height: "100%",
+    alignItems: "center",
   },
+  viewLoginWhite: {
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#fff",
+    minWidth: 280,
+    height: 400,
+    textAlign: "center",
+    borderRadius: 30,
+    borderWidth: 2,
+    opacity: 1,
+    position: "absolute",
+  },
+  loginLabelInput: {
+    fontSize: 16,
+    position: "relative",
+  },
+  loginImageInput: {
+    width: 30,
+    height: 30,
+    margin: 8,
+  },
+  loginViewGrey: {
+    backgroundColor: "#eee",
+    minWidthwidth: "80%",
+    height: "60%",
+    padding: 10,
+    borderWidth: 1,
+    borderRadius: 10,
+    
+  },
+  loginConfirma:{
+    minWidth:140,
+    minHeight:40,
+    backgroundColor:'#9e2626',
+    color:'#fff',
+    borderRadius:10,
+    borderWidth:1,
+    padding:2,
+    justifyContent:'center'
+  },
+  viewTeste:{
+    marginTop:15,
+    color:'#00f',
+    fontSize: 20,
+    textDecorationLine:'underline',
+    justifyContent: "center",
+    textAlign: "center",
+  }
 });
 
 export default estilos;
+
