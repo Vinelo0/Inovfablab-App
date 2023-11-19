@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import estilos from "./estilos";
 import {
   View,
@@ -11,9 +11,13 @@ import {
   StyleSheet,
   Linking,
   TouchableOpacity,
+  Switch,
 } from "react-native";
 
 function Login({ navigation }) {
+  const [senha, setSenha] = useState('');
+  const [mostrar, setMostrar] = useState(false);
+
   return (
     <View style={estilos.viewLogin}>
       <ImageBackground
@@ -63,21 +67,43 @@ function Login({ navigation }) {
               source={require("./assets/imagens/senha.png")}
               style={estilos.loginImageInput}
             ></Image>
-            <TextInput style={estilos.loginInp} placeholder="Senha"></TextInput>
+
+            <TextInput
+              style={estilos.loginInp}
+              placeholder="Senha"
+              value={senha}
+              onChangeText={(e) => setSenha(e)}
+              secureTextEntry={!mostrar}
+            />
           </View>
           <View style={{ alignItems: "center", marginTop: 15 }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+              <Text style={fontSize = 15}>Mostrar Senha</Text>
+
+              <Switch
+                value={mostrar}
+                onValueChange={() => setMostrar(!mostrar)}
+              />
+            </View>
             <TouchableOpacity
               style={estilos.loginConfirma}
               activeOpacity={0.7}
-              onPress={() => navigation.navigate("Home")}
+              onPress={() => navigation.navigate("Maquinas")}
             >
               <Text style={estilos.txt}>CONFIRMAR</Text>
             </TouchableOpacity>
           </View>
         </View>
-        <Text style={estilos.viewTeste} onPress={() => navigation.navigate("Home")}>Criar Conta</Text>
+        <Text
+          style={estilos.underline}
+          onPress={() => navigation.navigate("Home")}
+        >
+          Criar Conta
+        </Text>
       </View>
     </View>
   );
 }
+
 export default Login;
+
