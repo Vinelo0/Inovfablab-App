@@ -7,3 +7,4 @@ import AdministracaoStyle from "./AdministracaoStyle";
 import ReservaStyle from "./ReservaStyle";
 
 export default { HomeStyle, LoginStyle, AutorizacaoStyle, MaquinaStyle, HeaderStyle, AdministracaoStyle, ReservaStyle}
+

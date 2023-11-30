@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import estilos from './style/estilos'
-import { Link, NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
 import {
   View,
   TouchableHighlight,
@@ -9,11 +7,8 @@ import {
   TextInput,
   Text,
   Image,
-  ImageBackground,
-  StyleSheet,
   Linking,
   TouchableOpacity,
-  StatusBar,
 } from "react-native";
 
 let dados =[]

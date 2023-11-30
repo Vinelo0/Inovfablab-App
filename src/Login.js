@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import estilos from "./style/estilos";
+import { useUsuariosContext } from "./Context";
 import {
   View,
   Text,
@@ -14,16 +15,9 @@ import {
 
 // Array de usuários para autenticação
 const ImgPadrao = require('./assets/imagens/user.png')
-let usuarios = [
-  { id: 1, usuario: 'gustavo', email: 'gustavo@example.com', senha: '12345', fabcoins: 0, isAdm: false, img: ImgPadrao },
-  { id: 2, usuario: 'vinelo', email: 'vinelo@example.com', senha: '123456789', fabcoins: 0, isAdm: false, img: ImgPadrao },
-  { id: 3, usuario: 'zequinha', email: 'zequinha@example.com', senha: 'doublebiceps', fabcoins: 0, isAdm: true, img: require('./assets/imagens/ze.jpeg') },
-  { id: 4, usuario: 'yuri', email: 'storino@example.com', senha: 'koalaboy', fabcoins: 0, isAdm: true, img: require('./assets/imagens/koalaboy.png') },
-  { id: 5, usuario: 'conde', email: 'conde@example.com', senha: '001122', fabcoins: 0, isAdm: false, img: ImgPadrao },
-  { id: 6, usuario: 'ricardo', email: 'careca@example.com', senha: 'vegan', fabcoins: 0, isAdm: true, img: require('./assets/imagens/ricardo.jpeg') },
-];
 
 function Login({ navigation }) {
+  const { usuarios, updateUsuarios } = useUsuariosContext();
   const [usuario, setUsuario] = useState("");
   const [senha, setSenha] = useState("");
   const [email, setEmail] = useState("")
@@ -46,7 +40,8 @@ function Login({ navigation }) {
   const Login = () => {
     const usuarioExistente = Valida(); // Chama a função para verificar
     if (usuarioExistente) {
-      navigation.navigate(usuarioExistente.isAdm ? 'Administracao' : 'Maquinas', { usuario: usuarioExistente, usuarios: usuarios })
+      navigation.navigate(usuarioExistente.isAdm ? 'Administracao' : 'Maquinas',
+        { usuario: usuarioExistente, usuarios: usuarios })
     }
     else {
       alert("Usuário ou senha inválidos. Tente novamente.")
@@ -68,7 +63,7 @@ function Login({ navigation }) {
           usuario: usuario,
           email: email,
           senha: senha,
-          fabcoins: 50,
+          fabcoins: 0,
           isAdm: false,
           img: ImgPadrao
         }
@@ -116,11 +111,11 @@ function Login({ navigation }) {
             <TextInput
               style={estilos.LoginStyle.loginInp}
               placeholder="Usuário ou Email"
-              onChangeText={(t) => { //Verifica se o texto inserido contém @, se conter ele considera como email
-                if(t.includes('@')){
+              onChangeText={(t) => {
+                if (t.includes('@')) {
                   setEmail(t)
                 }
-                else{
+                else {
                   setUsuario(t)
                 }
               }}></TextInput>
